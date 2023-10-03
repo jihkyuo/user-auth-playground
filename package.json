@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "server": "nodemon --watch 'server/src/**/*' --exec 'ts-node' server/src/index.ts"
+    "server": "nodemon --exec ts-node server/src/init.ts"
   },
   "dependencies": {
     "axios": "^1.5.1",

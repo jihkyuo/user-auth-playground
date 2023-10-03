@@ -3,14 +3,8 @@ import morgan from "morgan";
 import cors from "cors";
 import { CorsOptions } from 'vite';
 
-import { userRouter } from "./routers/userRouter.js";
-import mongoose from 'mongoose';
-
-mongoose.connect(`mongodb://127.0.0.1:27017`);
-
-const db = mongoose.connection;
-db.on('error', (error) => console.log('DB Error', error));
-db.once('open', () => console.log('✅ Connected To DB'));
+import './db';
+import { userRouter } from './routers/userRouter';
 
 const app = express();
 
@@ -29,3 +23,5 @@ app.use('/user', userRouter);
 
 const PORT = 8000;
 app.listen(PORT, () => console.log(`✅ Server Listening on port http://localhost:${PORT}`));
+
+export default app;

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES6",
     "useDefineForClassFields": true,
     "lib": [
       "DOM",
@@ -9,7 +9,6 @@
     ],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
@@ -20,7 +19,8 @@
     "noImplicitThis": true,
     "useUnknownInCatchVariables": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "esModuleInterop": false,
+    "module": "ES6",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -34,7 +34,8 @@
     }
   },
   "ts-node": {
-    "esm": true
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   },
   "include": [
     "./client/src",

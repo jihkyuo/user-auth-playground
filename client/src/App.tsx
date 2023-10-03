@@ -4,7 +4,11 @@ import { useEffect } from 'react';
 
 
 const testApi = async () => {
-  return await Api.get(`/`);
+  return await Api.get(`user/login`);
+};
+
+const postApi = async () => {
+  return await Api.post(`user/login`, { test: 'hello world'});
 };
 
 function App() {
@@ -16,6 +20,8 @@ function App() {
   return (
     <>
       test
+
+      <button onClick={postApi}>click</button>
     </>
   );
 }

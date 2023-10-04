@@ -3,8 +3,14 @@ import morgan from "morgan";
 import cors from "cors";
 import { CorsOptions } from 'vite';
 
+// db
 import './db';
+
+// router
 import { userRouter } from './routers/userRouter';
+
+// schema
+import './models/User';
 
 const app = express();
 

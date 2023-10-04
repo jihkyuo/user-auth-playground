@@ -17,7 +17,6 @@
     "strictPropertyInitialization": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
-    "useUnknownInCatchVariables": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": false,
     "module": "ES6",
